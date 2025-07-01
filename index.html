@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D1 Clinic - Estetická medicína</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Design Selector -->
+<div id="design-selector" class="design-selector">
+    <div class="selector-overlay"></div>
+    <div class="selector-content">
+        <div class="clinic-logo">D1 clinic</div>
+        <h3>Vyberte dizajn</h3>
+        <div class="design-options">
+            <button onclick="selectDesign('minimal')" class="design-btn">
+                <div class="design-preview minimal-preview">
+                    <div class="preview-header"></div>
+                    <div class="preview-content">
+                        <div class="preview-line"></div>
+                        <div class="preview-line short"></div>
+                    </div>
+                </div>
+                <span>Minimalistický</span>
+                <small>Svetlý, čistý, horizontálne menu</small>
+            </button>
+            <button onclick="selectDesign('elegant')" class="design-btn">
+                <div class="design-preview elegant-preview">
+                    <div class="preview-sidebar"></div>
+                    <div class="preview-content">
+                        <div class="preview-title"></div>
+                        <div class="preview-text"></div>
+                    </div>
+                </div>
+                <span>Elegantný</span>
+                <small>Sivé tóny, vertikálne menu</small>
+            </button>
+            <button onclick="selectDesign('modern')" class="design-btn">
+                <div class="design-preview modern-preview">
+                    <div class="preview-header dark"></div>
+                    <div class="preview-content dark">
+                        <div class="preview-card"></div>
+                        <div class="preview-card"></div>
+                    </div>
+                </div>
+                <span>Moderný</span>
+                <small>Kontrastný, tmavé akcenty</small>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Navigation for Minimal Design -->
+<nav id="nav-minimal" class="nav-minimal hidden">
+    <div class="nav-container">
+        <div class="logo">D1 clinic</div>
+        <ul class="nav-menu">
+            <li><a href="#hero">Domov</a></li>
+            <li><a href="#about">O nás</a></li>
+            <li><a href="#know">Viem čo chcem</a></li>
+            <li><a href="#procedures">Zákroky</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Navigation for Elegant Design -->
+<nav id="nav-elegant" class="nav-elegant hidden">
+    <div class="elegant-menu">
+        <div class="menu-item"><a href="#about">O nás</a></div>
+        <div class="menu-item"><a href="#know">Viem čo chcem</a></div>
+        <div class="menu-item"><a href="#dont-know">Neviem čo chcem</a></div>
+        <div class="menu-item"><a href="#procedures">Zákroky</a></div>
+        <div class="menu-item"><a href="#booking">Objednaj sa</a></div>
+        <div class="menu-item"><a href="#terms">Obchodné podmienky</a></div>
+    </div>
+</nav>
+
+<!-- Navigation for Modern Design -->
+<nav id="nav-modern" class="nav-modern hidden">
+    <div class="nav-container">
+        <div class="logo">D1 clinic</div>
+        <div class="hamburger" onclick="toggleMobileMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-menu" id="mobile-menu">
+            <li><a href="#hero">Domov</a></li>
+            <li><a href="#about">O nás</a></li>
+            <li><a href="#know">Služby</a></li>
+            <li><a href="#procedures">Zákroky</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<main id="main-content" class="hidden">
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-left">
+                <h1 class="clinic-title">D1 clinic</h1>
+                <div class="social-icons">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="hero-text">
+                    <p>Milujeme estetiku. Milujeme kvalitu a prirodzenosť. Preto ti prinášame profesionálne skúsenosti a kvalitu z Nemecka a Prahy.</p>
+                    <p>Základom každého zákroku v D1 je diagnostika. Rozhovor, tvoja predstava a následne naša odbornosť. Naším cieľom je tvoj dobrý pocit a skutočné výsledky.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-content">
+                <h2>O nás</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <h3>Naša filozofia</h3>
+                        <p>V D1 Clinic veríme, že krása spočíva v prirodzenosti a harmónii. Naším cieľom nie je meniť vás, ale zvýrazniť vašu jedinečnú krásu a dodať vám sebavedomie.</p>
+                        <div class="features">
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Individuálny prístup ku každému klientovi</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Najnovšie technológie a metódy</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Certifikovaní odborníci s medzinárodnou praxou</span>
+                            </div>
+                            <div class="feature">
+                                <i class="fas fa-check"></i>
+                                <span>Bezpečnosť a kvalita na prvom mieste</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-image">
+                        <div class="image-placeholder"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Know What Section -->
+    <section id="know" class="know-what">
+        <div class="container">
+            <div class="section-content">
+                <h2>Viem čo chcem</h2>
+                <p class="section-intro">Máte jasnú predstavu o tom, čo chcete zmeniť? Perfektne! Naši odborníci vám pomôžu dosiahnuť váš cieľ bezpečne a efektívne.</p>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h4>Konzultácia</h4>
+                        <p>Bezplatná konzultácia s odborníkom, kde prediskutujeme vaše predstavy a možnosti</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-calendar-check"></i>
+                        </div>
+                        <h4>Plánovanie</h4>
+                        <p>Vytvoríme individuálny plán postupu prispôsobený vašim potrebám</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <h4>Výsledok</h4>
+                        <p>Dosiahnutie vašich cieľov s dlhodobým efektom a prirodzeným vzhľadom</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Don't Know Section -->
+    <section id="dont-know" class="dont-know">
+        <div class="container">
+            <div class="section-content">
+                <h2>Neviem čo chcem</h2>
+                <p class="section-intro">Nie je problém! Naši odborníci vám pomôžu objaviť možnosti a nájsť riešenie, ktoré bude pre vás ideálne.</p>
+                <div class="consultation-flow">
+                    <div class="flow-step">
+                        <div class="step-number">01</div>
+                        <h4>Diagnostika a analýza</h4>
+                        <p>Podrobná analýza vašej pleti a rysov tváre pomocou najmodernejších technológií</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">02</div>
+                        <h4>Personalizované odporúčania</h4>
+                        <p>Na základe analýzy vám navrhneme optimálne riešenia pre vaše potreby</p>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-number">03</div>
+                        <h4>Postupná realizácia</h4>
+                        <p>Implementácia plánu s možnosťou postupných úprav podľa vašich preferencií</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Procedures Section -->
+    <section id="procedures" class="procedures">
+        <div class="container">
+            <div class="section-content">
+                <h2>Naše zákroky</h2>
+                <div class="procedures-grid">
+                    <div class="procedure-card">
+                        <div class="procedure-icon">
+                            <i class="fas fa-syringe"></i>
+                        </div>
+                        <h4>Botox</h4>
+                        <p>Redukcia mimických vrások a prevencia ich vzniku. Prirodzený vzhľad bez straty výrazu.</p>
+                    </div>
+                    <div class="procedure-card">
+                        <div class="procedure-icon">
+                            <i class="fas fa-tint"></i>
+                        </div>
+                        <h4>Dermal Fillery</h4>
+                        <p>Modelovanie a zvýraznenie rysov tváre, doplnenie objemu pier a líc.</p>
+                    </div>
+                    <div class="procedure-card">
+                        <div class="procedure-icon">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h4>Mezoterapia</h4>
+                        <p>Revitalizácia a hydratácia pleti, zlepšenie textúry a elasticity.</p>
+                    </div>
+                    <div class="procedure-card">
+                        <div class="procedure-icon">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <h4>Laserové ošetrenia</h4>
+                        <p>Odstránenie pigmentácií, rozšírených žiliek a nedokonalostí pleti.</p>
+                    </div>
+                    <div class="procedure-card">
+                        <div class="procedure-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>Chemický peeling</h4>
+                        <p>Obnovenie pleti, zlepšenie textúry a redukcia jemných vrások.</p>
+                    </div>
+                    <div class="procedure-card">
+                        <div class="procedure-icon">
+                            <i class="fas fa-spa"></i>
+                        </div>
+                        <h4>Ošetrenie pleti</h4>
+                        <p>Komplexné ošetrenie pre zdravú a žiarivú pleť všetkých typov.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <div class="container">
+            <div class="booking-content">
+                <h2>Objednaj sa</h2>
+                <p>Rezervujte si termín online alebo nás kontaktujte pre osobnú konzultáciu</p>
+                <a href="https://bookio.com" target="_blank" class="booking-btn">
+                    <i class="fas fa-calendar-plus"></i>
+                    <span>Rezervovať termín</span>
+                </a>
+                <div class="booking-info">
+                    <p>Prvá konzultácia je bezplatná</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terms Section -->
+    <section id="terms" class="terms">
+        <div class="container">
+            <div class="section-content">
+                <h2>Obchodné podmienky</h2>
+                <div class="terms-grid">
+                    <div class="terms-item">
+                        <h4>Rezervácia termínu</h4>
+                        <p>Termíny je možné rezervovať online cez Bookio systém alebo telefonicky. Odporúčame rezerváciu aspoň 48 hodín vopred.</p>
+                    </div>
+                    <div class="terms-item">
+                        <h4>Zrušenie termínu</h4>
+                        <p>Termín je možné zrušiť bez poplatku najneskôr 24 hodín pred plánovaným ošetrením. Pri neskoršom zrušení si vyhradzujeme právo na storno poplatok.</p>
+                    </div>
+                    <div class="terms-item">
+                        <h4>Platobné podmienky</h4>
+                        <p>Prijímame platby v hotovosti, kartou alebo bankovým prevodom. Faktúry vystavujeme na požiadanie. Možnosť splátok pre väčšie zákroky.</p>
+                    </div>
+                    <div class="terms-item">
+                        <h4>Garancia kvality</h4>
+                        <p>Na všetky naše služby poskytujeme záruku kvality. Následné kontroly a korekcie sú v cene ošetrenia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Kontakt</h2>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Adresa</h4>
+                                <p>Hlavná 123<br>010 01 Žilina</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefón</h4>
+                                <p>+421 123 456 789</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@d1clinic.sk</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Otváracie hodiny</h4>
+                                <p>Po-Pi: 9:00-18:00<br>So: 9:00-14:00<br>Ne: zatvorené</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2610.5!2d18.7408!3d49.2237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDnCsDEzJzI1LjMiTiAxOMKwNDQnMjcuMCJF!5e0!3m2!1ssk!2ssk!4v1234567890"
+                            width="100%"
+                            height="400"
+                            style="border:0;"
+                            allowfullscreen=""
+                            loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

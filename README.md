@@ -1,1 +1,1 @@
-# d1clinic.github.io
+# d1clinic
